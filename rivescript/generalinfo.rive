@@ -1,0 +1,17 @@
+> topic general
++ name
+- {"text": "Can you please tell me your good name", "options":[]}
+
++ * name is *
+% * tell me your *
+- <set name=<star2>>{"text": "What is your phone number", "options":[]}
+
++ *
+% * your phone number *
+- <set phone=<star>>{"text": "please specify one valid id proof", "options":[]}
+
++ *
+% * one valid id *
+- <set idproof=<star>>{"text": "please specify one valid id proof", "options":[]}
+
+< topic

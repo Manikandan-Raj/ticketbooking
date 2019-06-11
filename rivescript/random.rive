@@ -1,0 +1,22 @@
++ (@greeting)
+- {@greetings}
+
++ greetings
+* <get name> == undefined => {"text": "I am your Ticket Booking Assistant.I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":{}}
+- {"text": "Hi <b><get name></b>, I am your Ticket Booking Assistant .I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":{}}
+
++ * name *
+% * am your ticket booking assistant *
+- {"text": "Hi <b><get name></b>, I am your Ticket Booking Assistant.I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":{}}
+
++ (@greeting)
+% * am your ticket booking assistant *
+- {"text": "Hi <b><get name></b>, I am your Ticket Booking Assistant.I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":{}}
+
+
+
++ (@bye) [*]
+- {@thanks}
+
++ thanks
+- {"text":"Thank you, have a Great Day.","options":{}}

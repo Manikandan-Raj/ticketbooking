@@ -1,0 +1,26 @@
+! version = 2.0
++ (hello|hi|hey) machine
+- Hey!, How are you?
+
++ (hey)bot
+- HI, How can I help?{weight=5}
+- Hello, {random}Nice|Happy{weight=5}{/random}\s
+^ to meet you:)
+- Very Happy to see You, Tell me how could I help you!
+
++ tell me a poem for me
+- What type of poem you want, I can\s
+^ provide you \n 1.Nature \n 2.Love \n 3.Music
+
++ my name is * and i am * years old and i like *
+- Awe! Glad to meet you <star1>, I am also <star2> years old.\n
+^ That's awesome that you are interested in <star3>
+
++ how [are] you doing
+- Yes I am good, What about you!
+
++ i have (red|blue|green) color car
+- Wow, I too like your <star> color CAR.
+
++  * [*] * machine * [*]
+- <star1>How did you know that I am a machine!<star2>. <star3>
