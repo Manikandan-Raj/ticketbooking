@@ -1,0 +1,66 @@
+! version = 2.0
+! var master = kirsle
+! array colors = red blue green yellow
+! global debug = true
+! var name = mani
+
+! sub i'm     = i am
++ hello bot
+- Hello, human!
+
+
++ say something random
+- This {random}message|sentence{/random} has a random word.
+
++ i bought a new *
+- Oh? What color is your new <star>? 
+
++ am i your master
+* <id> == <bot master> => Yes, you are. Hi Kirsle!
+- No, <bot master> is my master, and you are <id>.
+
++ i am _ years old
+- You are <star> old:)
+
++  i am (10|11) years old
+- You are <star> old:)
+
++ i (will|will not) *
+- It doesn't matter to me whether you start:<star> star1:<star1> star2:<star2> or not.
+
++ i like (@colors)
+- Me too like that <star>
+
++ i like @colors very much
+- Me too like that <star>
+
++ i dnt like [@colors]
+- Me too dnt like
+
+
++ google *{weight=10}
+- Google search: <a href="http://google.com/search?q=<star>">Click Here</a>
+
++ *{weight=20} perl script
+- You need Perl to run a Perl script.
+
+
++ hello * hi *
+- {@ <star>}{@ hello} {@ <star2>}
+
++ hello
+- Hi there!\n
+
++ are you a bot
+- How did you know I'm a machine?\n
+
++ please
+- U reached here
+  
++ what is my ip
+  - Your IP address is: <env REMOTE_ADDR>
+  
+  
++ what is my friend name
+//* %<get name> != undefined => your friend name is <get name>
+* %<bot name> != undefined => your frind name bot is <bot name>
