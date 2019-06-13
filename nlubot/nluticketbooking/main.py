@@ -43,9 +43,3 @@ def format_return_data():
 
 if __name__ == "__main__":
     APP.run()
-# training_data = load_data('/home/mani/nlu/py36nlu/data.json')
-# trainer = Trainer(config.load("/home/mani/nlu/py36nlu/config_spacy.yml"))
-# instance = trainer.train(training_data)
-# model_directory = trainer.persist('/home/mani/nlu/py36nlu/nlucode/')
-#
-# instance.parse(text="good bye")
