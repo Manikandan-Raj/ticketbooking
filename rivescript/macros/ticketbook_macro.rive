@@ -19,11 +19,9 @@
       if flightlist:
         flightlist.append('list_replies')
         json_value = json.dumps(flightlist)
-        print("HELLOOOOOOOOOO------>", json_value)
         rs.set_uservar(rs.current_user(),'availableflightlist', json_value)
         rs.set_uservar(rs.current_user(),'flightstatus', "success")
         all_users = rs.get_uservars(rs.current_user())
-        print("ALL user variable--->", all_users)
         return "success"
       else:
         rs.set_uservar(rs.current_user(),'flightstatus', "failure")
@@ -55,7 +53,6 @@
       elif type == "cheapest":
         filteredlist = [item for item in flightlist if item['connection'] == "False"]
 
-      print("What is filteredlist--->", filteredlist)
       if filteredlist:
         filteredlist.append('list_replies')
         json_value = json.dumps(filteredlist)

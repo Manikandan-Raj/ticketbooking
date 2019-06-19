@@ -2,11 +2,11 @@
 - {@greetings}
 
 + (@greetings)
-- {"text": "Hi, I am your Ticket Booking Assistant .I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":["1.Book","2.Cancel","quick_replies"]}
+- {"text": "Hi, I am your Ticket Booking Assistant .I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":["Book","Cancel","quick_replies"]}
 
 + (@greeting)
 % *
-- {"text": "Hi, I am your Ticket Booking Assistant .I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":["1.Book","2.Cancel","quick_replies"]}
+- {"text": "Hi, I am your Ticket Booking Assistant .I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":["Book","Cancel","quick_replies"]}
 
 + (@bye) [*]
 % *
@@ -15,14 +15,19 @@
 + thanks
 - {"text":"Thank you, have a Great Day.","options":[]}
 
-// This trigger is for Guided Approach, topic is getting switched to ticketbook
-//+ *
-//% * am your ticket booking assistant*
-//- {topic=ticketbooking}{@book}
++ [*](book|travel|ticket|one|1)[*]
+% *
+- {topic=random}{@callnlutofindintent}
 
++ [*](cancel|quit)[*]
+% *
+- {"text": "Sorry, this service is not available", "options":[]}
 
 + *
 % *
+- {"text":"Sorry i am limited to answer related to Flight booking and Cancellation", "options":[]}
+
++ callnlutofindintent
 * <call>indent_indentification flightticket</call> == failure => {topic=random}{@intentidentifiedrandom}
 - {topic=random}{@intentidentifiedrandom}
 

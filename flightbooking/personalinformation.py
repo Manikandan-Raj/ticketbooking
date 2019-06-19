@@ -1,12 +1,15 @@
-def personalinfovalidation(rs,name, phonenumber, id):
+def personalinfophone(phone):
     import re
     phone_regex = re.compile("[7-9][0-9]{9}")
-    id_regex = re.compile("[0-9]{12}")
-    if phone_regex.match(phonenumber):
-        if id_regex.match(id):
-            return "success"
-        else:
-            return '{"text": "Entered id is not valid,Please give me the aadhar card number", "options":[]}'
-
+    if phone_regex.match(phone):
+        return "success"
     else:
-        return '{"text": "Entered phonenumber is not valid,Please give me your phone number", "options":[]}'
+        return "failure"
+
+def personalinfoid(aadhar):
+    import re
+    id_regex = re.compile("[0-9]{12}")
+    if id_regex.match(aadhar):
+        return "success"
+    else:
+        return "failure"

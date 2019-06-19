@@ -10,8 +10,6 @@ class ModelExtracter(object):
 
     def checkmodel(self, instance):
         self.model_folder = self.parser.get("FOLDER", "MODEL")
-        print ("Model folder", self.model_folder)
-        print ("Type of Model Folder", type(self.model_folder))
         all_models = listdir(self.model_folder)
         if instance in all_models:
             return True

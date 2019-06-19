@@ -2,8 +2,6 @@ from rasa_nlu.training_data import load_data
 from rasa_nlu.model import Trainer
 
 from rasa_nlu.model import Interpreter
-
-
 from rasa_nlu import config
 from configparser import ConfigParser
 from ModelExtracter import ModelExtracter
@@ -56,26 +54,19 @@ class RasaInterface(object):
     def predict(self, inputtext):
         model_folder = self.parser.get("FOLDER", "MODEL")
         if self.model in InstanceLoader:
-            print("InstanceLoader if predict", InstanceLoader)
             instance = InstanceLoader[self.model]
             response = instance.parse(text=inputtext)
-            print("parsing instance", response)
-            print("Type of response", type(response))
             return jsonify(response)
-            
+
         else:
             model_folder = self.parser.get("FOLDER", "MODEL")
-            print("InstanceLoader else predict", InstanceLoader)
             if self.model in os.listdir(model_folder):
                 model_identification = model_folder + self.model + "/default"
-                print("What is model here", model_identification)
                 existing_model = os.listdir(model_identification)[0]
                 model_found = model_identification + "/" + existing_model
                 instance = Interpreter.load(model_found)
                 InstanceLoader[self.model] = instance
                 response = instance.parse(text=inputtext)
-                print("parsing instance", response)
-                print("Type of response", type(response))
                 return jsonify(response)
             else:
                 return "Bot instance is not available"

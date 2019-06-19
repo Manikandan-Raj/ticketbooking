@@ -10,11 +10,9 @@
 > object departurevalidation python
     try:
       import json
-      print("Typed text----->", args[0])
       with open("./utils/ticket.json", "r") as outfile:
           flightdb = json.load(outfile)
           for item in flightdb:
-              print("Departure idea----->", item)
               if item['From'].lower() == args[0].strip().lower():
                   return "success"
       return "failure"
@@ -35,20 +33,18 @@
       return str(err)
 < object
 
-> object personalinformation python
+> object personalinfophone python
     try:
-      import json
       import personalinformation
-      name = rs.get_uservar(rs.current_user(),'username')
-      phonenumber = rs.get_uservar(rs.current_user(),'phonenumber')
-      id = rs.get_uservar(rs.current_user(),'personalid')
-      status = personalinformation.personalinfovalidation(rs, name, phonenumber, id)
-      if status != "success":
-        sample =  json.loads(status)
-        print("JSON DECODE----->", sample)
-        rs.set_uservar(rs.current_user(), "status", status)
-        return "failure"
-      return "success"
+      return personalinformation.personalinfophone(args[0])
+    except Exception as err:
+      return str(err)
+< object
+
+> object personalinfoid python
+    try:
+      import personalinformation
+      return personalinformation.personalinfoid(args[0])
     except Exception as err:
       return str(err)
 < object

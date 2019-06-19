@@ -4,16 +4,11 @@ from datetime import datetime
 
 
 def checkavailability(*traveldate, departure, destination):
-    print("DATE------>", traveldate)
-    print("DEPARTURE------>", departure)
-    print("DESTINATION------>", destination)
-
     available_flight_list = []
-    with open("./utils/ticket_backup.json", "r") as outfile:
+    with open("./utils/ticket.json", "r") as outfile:
         flightdb = json.load(outfile)
         for item in flightdb:
             if (item['From'].lower() == departure) and (item['To'].lower() == destination) and checkflightondate(*traveldate, availabledata=item['Date']):
-             # (item['Date'].lower() == traveldate[0]):
                 flight_details = {}
                 flight_details['flightname'] = item['Airlines']
                 flight_details['flightno'] = item['Flight No']
@@ -29,8 +24,6 @@ def checkavailability(*traveldate, departure, destination):
 
 
 def checkflightondate(*traveldate, availabledata):
-    print("Date Comparison in checkflightondate--->",*traveldate)
-    print("Type of date--->",traveldate[0])
     if len(traveldate) == 1:
         traveldate = datetime.strptime(traveldate[0], '%d/%m/%Y')
         availabledata = datetime.strptime(availabledata, '%d/%m/%Y')
@@ -58,7 +51,7 @@ def referenceno(rs):
         selectedflight = rs.get_uservar(rs.current_user(), 'selectedflight')
         flightout = []
         referenceno = "failure"
-        with open("./utils/ticket_backup.json", "r") as outfile:
+        with open("./utils/ticket.json", "r") as outfile:
             flightdb = json.load(outfile)
 
             for item in flightdb:
@@ -70,7 +63,7 @@ def referenceno(rs):
                 else:
                     flightout.append(item)
 
-        with open("./utils/ticket_backup.json", "w") as file:
+        with open("./utils/ticket.json", "w") as file:
             json.dump(flightout, file)
             rs.set_uservar(rs.current_user(), 'referenceno', str(referenceno))
             return "success"

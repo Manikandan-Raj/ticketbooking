@@ -3,7 +3,6 @@
       import nluinterface
       typed_text = rs.get_uservar(rs.current_user(),'typed_text')
       response = nluinterface.extract_entity_from_intent(rs, rs.current_user(), args[0], typed_text)
-      print("Response--->", response)
       return response
     except Exception as err:
       return(str(err))
