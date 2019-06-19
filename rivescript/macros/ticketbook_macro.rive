@@ -1,0 +1,76 @@
+! version = 2.0
+> object flight_availability python
+    try:
+      import os
+      import flight_details
+      import json
+
+      date = rs.get_uservar(rs.current_user(), 'date')
+      departure = rs.get_uservar(rs.current_user(),'from')
+      destination = rs.get_uservar(rs.current_user(),'to')
+      startdate = rs.get_uservar(rs.current_user(), 'startdate')
+      enddate = rs.get_uservar(rs.current_user(), 'enddate')
+      flightlist = []
+      if date != "undefined":
+        flightlist = flight_details.checkavailability(date, departure=departure, destination=destination)
+      else:
+        flightlist = flight_details.checkavailability(startdate,enddate,departure=departure, destination=destination)
+
+      if flightlist:
+        flightlist.append('list_replies')
+        json_value = json.dumps(flightlist)
+        print("HELLOOOOOOOOOO------>", json_value)
+        rs.set_uservar(rs.current_user(),'availableflightlist', json_value)
+        rs.set_uservar(rs.current_user(),'flightstatus', "success")
+        all_users = rs.get_uservars(rs.current_user())
+        print("ALL user variable--->", all_users)
+        return "success"
+      else:
+        rs.set_uservar(rs.current_user(),'flightstatus', "failure")
+        return "failure"
+    except Exception as ex:
+        rs.set_uservar(rs.current_user(),'flightstatus', str(ex))
+        return str(ex)
+< object
+
+> object checkticket python
+    try:
+      import flight_details
+      status = flight_details.checkticket(rs,args[0])
+      return status
+    except Exception as err:
+      return str(err)
+< object
+
+> object filterflight python
+    try:
+      import json
+      filteredlist = None
+      type = args[0]
+      flightlist = rs.get_uservar(rs.current_user(), 'availableflightlist')
+      flightlist = json.loads(flightlist)[0:-1]
+
+      if type == "direct" or type == "fastest":
+        filteredlist = [item for item in flightlist if item['connection'] == "True"]
+      elif type == "cheapest":
+        filteredlist = [item for item in flightlist if item['connection'] == "False"]
+
+      print("What is filteredlist--->", filteredlist)
+      if filteredlist:
+        filteredlist.append('list_replies')
+        json_value = json.dumps(filteredlist)
+        rs.set_uservar(rs.current_user(),'filteredlist',json_value)
+        return "success"
+      else:
+        return "failure"
+    except Exception as err:
+      return str(err)
+< object
+
+> object getreferenceno python
+    try:
+      import flight_details
+      return str(flight_details.referenceno(rs))
+    except Exception as err:
+      return str(err)
+< object

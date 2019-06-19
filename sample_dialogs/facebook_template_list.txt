@@ -1,0 +1,27 @@
+reply_to_user = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Please select one flight from below list?",
+        "buttons":[
+          {
+            "type":"postback",
+            "title":"Singapore Airlines",
+            "payload":"Selected singapore airlines"
+          },
+          {
+            "type":"postback",
+            "title":"Citi Airlines",
+            "payload":"Selected citi airlines"
+          }
+          ]
+         }
+        }
+    }
+
+post_data = {}
+    # post_data["messaging_type"] = "RESPONSE"
+    post_data["recipient"] = sender_details
+    post_data["message"] = reply_to_user
+

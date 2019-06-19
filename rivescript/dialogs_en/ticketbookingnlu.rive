@@ -1,0 +1,132 @@
+> topic ticketbooking
+
++ (@greeting)
+% *
+- {"text": "Hi, I am your Ticket Booking Assistant .I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":["1.Book","2.Cancel","quick_replies"]}
+
++ (@bye) [*]
+% *
+- <call>reset_user_vars</call> == success => {@thanks}
+
++ thanks
+- {"text":"Thank you, have a Great Day.","options":[]}{topic=random}
+
+
++ *
+% (* am your ticket booking assistant*|* give me the departure *|* specify the destination*|* date when you want to travel*|* i am limited to answer related *|* have a great day*|* no flights are available*)
+* <call>indent_indentification flightticket</call> == success => {@intentidentified}
+- {@guidedway <star>}
+
+
++ intentidentified
+* <get from> == undefined => {@fromintent}
+* <get to> == undefined => {@tointent}
+* <get date> == undefined => {@dateintent}
+- {topic=ticketbooking}{@finalvalidation}
+
++ guidedway *
+* <get from> == undefined => {@from <star>}
+* <get to> == undefined => {@to <star>}
+* <get date> == undefined => {@date <star>}
+- {topic=ticketbooking}{@finalvalidation}
+
++ fromintent
+- {"text":"Sure I can help you. Please give me the departure to proceed further", "options":[]}
+
++ from *
+- <set from=<star>>{@intentidentified}
+
++ tointent
+- {"text": "Please specify the destination", "options":[]}
+
++ to *
+- <set to=<star>>{@intentidentified}
+
++ dateintent
+- {"text": "Kindly tell me the date when you want to travel. Please specify date in dd/mm/yyyy format ?", "options":[]}
+
++ date *
+- <set date=<star>>{@intentidentified}
+
++ finalvalidation
+* <call>departurevalidation <get from></call> == failure => {@resetvar departure <get from>}
+* <call>destinationvalidation <get to></call> == failure => {@resetvar destination <get to>}
+* <call>datevalidation <get date></call> == failure => {@dateintent}
+* <call>flight_availability</call> == success => {@returnflightstatus}
+* <get flightstatus> == failure => {@resetuservars}
+- {"text":"Please call to our executives",  "options":[]}
+
+
++ resetvar departure *
+- <call>reset_user_vars_single from</call> == success => {@departurefail}
+
++ departurefail
+- {"text":"Our service is not available to the place which you entered. Please give me the departure to proceed further", "options":[]}
+
+
++ resetvar destination *
+- <call>reset_user_vars_single to</call> == success => {@destinationfail}
+
++ destinationfail
+- {"text":"Our service is not available to the place which you entered. Please specify the destination", "options":[]}
+
++ returnflightstatus
+- {"text": "Please select any one flight from the below list:", "options":<get availableflightlist>}
+
++ resetuservars
+- <call>reset_user_vars</call> == success => {@noflight}
+
++ noflight
+- {"text":"Sorry, No Flights are available",  "options":[]}
+
++ errormessage
+- {"text":"Sorry i am limited answer related to Flight booking and Cancellation", "options":[]}
+
++ *
+% * select any one flight from *
+* <set selectedflight=<star>><call>checkticket <star></call> == success => {"text": "Tickets are available. Please enter your name to complete the booking process", "options":[]}
+- {"text":"Sorry, tickets are not available.", "options":[]}
+
++ [*]direct[*]
+% * select any one flight from *
+* <call>filterflight direct</call> == success => {"text": "Please select any one flight from the below list:", "options":<get filteredlist>}
+- {"text":"Sorry, tickets are not available.", "options":[]}
+
++ [*]fastest[*]
+% * select any one flight from *
+* <call>filterflight fastest</call> == success => {"text": "Please select any one flight from the below list:", "options":<get filteredlist>}
+- {"text":"Sorry, tickets are not available.", "options":[]}
+
+
++ [*]cheapest[*]
+% * select any one flight from *
+* <call>filterflight cheapest</call> == success => {"text": "Please select any one flight from the below list:", "options":<get filteredlist>}
+- {"text":"Sorry, tickets are not available.", "options":[]}
+
++ <star>
+% *
+- {"text":"Sorry i am limited to answer related to Flight booking and Cancellation", "options":[]}
+
++ *
+% *enter your name*
+- <set username=<star>><get phonenumber> == undefined => {"text": "Please give me your phone number", "options":[]}
+
++ *
+% * give me your phone*
+- <set phonenumber=<star>><get personalid> == undefined => {"text": "Please give me the aadhar card number", "options":[]}
+
++ *
+% * give me the aadhar*
+- <set personalid=<star>>{@personalinfovalidation}
+
+
++ personalinfovalidation
+* <call>personalinformation</call> == success => {@referenceno}
+- <get status>
+
++ referenceno
+* <call>getreferenceno</call> != failure => {"text": "Your ticket has been booked and the referenceno is <get referenceno>", "options":[]}
+- {"text": "Please try again..", "options":[]}
+
+
+< topic

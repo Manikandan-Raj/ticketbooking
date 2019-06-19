@@ -1,0 +1,33 @@
++ (@greeting)
+- {@greetings}
+
++ (@greetings)
+- {"text": "Hi, I am your Ticket Booking Assistant .I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":["1.Book","2.Cancel","quick_replies"]}
+
++ (@greeting)
+% *
+- {"text": "Hi, I am your Ticket Booking Assistant .I can help you to book the Flight Ticket. You can say bye anytime to leave conversation.", "options":["1.Book","2.Cancel","quick_replies"]}
+
++ (@bye) [*]
+% *
+- <call>reset_user_vars</call> == success => {@thanks}
+
++ thanks
+- {"text":"Thank you, have a Great Day.","options":[]}
+
+// This trigger is for Guided Approach, topic is getting switched to ticketbook
+//+ *
+//% * am your ticket booking assistant*
+//- {topic=ticketbooking}{@book}
+
+
++ *
+% *
+* <call>indent_indentification flightticket</call> == failure => {topic=random}{@intentidentifiedrandom}
+- {topic=random}{@intentidentifiedrandom}
+
++ intentidentifiedrandom
+* <get from> == undefined => {topic=ticketbooking}{@fromintent}
+* <get to> == undefined => {topic=ticketbooking}{@tointent}
+* <get date> == undefined => {topic=ticketbooking}{@dateintent}
+- {topic=ticketbooking}{@finalvalidation}

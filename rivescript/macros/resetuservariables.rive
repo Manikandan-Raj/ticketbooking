@@ -1,0 +1,25 @@
+> object reset_user_vars python
+    import resetuservars
+    resetvalues = ['topic','__history__','typed_text','__lastmatch__']
+    try:
+      status = rs.get_uservars(rs.current_user())
+      for item,value in status.items():
+        if item not in resetvalues:
+          rs.set_uservar(rs.current_user(),item,"undefined")
+      return "success"
+    except Exception as err:
+      return str(err)
+< object
+
+> object reset_user_vars_single python
+    import resetuservars
+    resetvalues = ['topic','__history__','typed_text','__lastmatch__']
+    try:
+      status = rs.get_uservars(rs.current_user())
+      for item,value in status.items():
+        if item in args[0]:
+          rs.set_uservar(rs.current_user(),item,"undefined")
+      return "success"
+    except Exception as err:
+      return str(err)
+< object

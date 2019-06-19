@@ -1,0 +1,45 @@
+> topic ticketbook
+
++ book
+- {"text": "Sure I can help you. Please give me the departure to proceed further", "options":[]}
+
++ (@bye) [*]
+% *
+- {@thanks}
+
++ thanks
+- {"text":"Thank you, have a Great Day.","options":{}}{topic=random}
+
++ *
+% * please give me the *
+- <set from=<star>>{"text": "Please specify the destination", "options":[]}
+
++ *
+% * specify the destination*
+- <set to=<star>>{"text": "Kindly tell me the date when you want to travel. Please specify date in dd/mm/yyyy format ?", "options":[]}
+
++ *
+% * date when you want to travel*
+* <set date=<star>><call>datevalidation <get date></call> == failure => {"text": "Kindly tell me the date when you want to travel. Please specify date in dd/mm/yyyy format?", "options":[]}
+* <call>flight_availability</call> == success => {@returnflightstatus}
+* <get flightstatus> == failure => {topic=random}{@resetuservars}
+- {"text":"Please call to our executives",  "options":[]}
+
++ between * and *
+% * date when you want to travel*
+* <set startdate=<star1>><set enddate=<star2>><call>datevalidation <get date></call> == failure => {"text": "Kindly tell me the date when you want to travel. Please specify date in dd/mm/yyyy format?", "options":[]}
+* <call>flight_availability</call> == success => {@returnflightstatus}
+* <get flightstatus> == failure => {topic=random}{@resetuservars}
+- {"text":"Please call to our executives",  "options":[]}
+
++ returnflightstatus
+- {"text": "Please select one flight from below:", "options":<get availableflightlist>}
+
+
+
++ *
+% *
+- {"text":"Sorry i am limited answer related to Flight booking and Cancellation", "options":[]}{topic=random}
+
+
+< topic

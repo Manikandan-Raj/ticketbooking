@@ -1,0 +1,28 @@
+# Quick reply:
+# Giving options button
+sender_details = {}
+  sender_details["id"] = sender_id
+  reply_to_user = {}
+  # reply_to_user["text"] = bot_reply['text']
+  reply_to_user= {
+  "text": "Pick a color:",
+  "quick_replies":[
+    {
+      "content_type":"text",
+      "title":"hi",
+      "payload":"hi"
+      # "image_url":"http://example.com/img/red.png"
+    },{
+      "content_type":"text",
+      "title":"thanks",
+      "payload":"thanks"
+      # "image_url":"http://example.com/img/green.png"
+    }
+  ]
+}
+post_data = {}
+post_data["messaging_type"] = "RESPONSE"
+post_data["recipient"] = sender_details
+post_data["message"] = reply_to_user
+
+requests.post(url=url, headers=headers, data=json.dumps(post_data))

@@ -1,0 +1,329 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "chennai",
+            "entity": "from"
+          },
+          {
+            "start": 33,
+            "end": 42,
+            "value": "bangalore",
+            "entity": "to"
+          }
+        ],
+        "text": "i want to travel from chennai to bangalore"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "chennai",
+            "entity": "to"
+          }
+        ],
+        "text": "Can i get a ticket to chennai"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 27,
+            "end": 36,
+            "value": "bangalore",
+            "entity": "to"
+          },
+          {
+            "start": 40,
+            "end": 50,
+            "value": "22/08/2019",
+            "entity": "date"
+          }
+        ],
+        "text": "I am planning to travel to bangalore in 22/08/2019"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "chennai ",
+            "entity": "to"
+          },
+          {
+            "start": 38,
+            "end": 48,
+            "value": "22/08/2019",
+            "entity": "date"
+          }
+        ],
+        "text": "Is ticket is available for chennai on 22/08/2019"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 45,
+            "end": 52,
+            "value": "chennai",
+            "entity": "from"
+          },
+          {
+            "start": 56,
+            "end": 65,
+            "value": "bangalore",
+            "entity": "to"
+          },
+          {
+            "start": 69,
+            "end": 79,
+            "value": "22/08/2019",
+            "entity": "date"
+          }
+        ],
+        "text": "can you assist me to book flight ticket from chennai to bangalore on 22/08/2019"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "cheapest ",
+            "entity": "type"
+          },
+          {
+            "start": 31,
+            "end": 39,
+            "value": "chennai ",
+            "entity": "from"
+          },
+          {
+            "start": 42,
+            "end": 51,
+            "value": "bangalore",
+            "entity": "to"
+          }
+        ],
+        "text": "cheapest flight available from chennai to bangalore"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chennai",
+            "entity": "to"
+          },
+          {
+            "start": 9,
+            "end": 17,
+            "value": "fastest ",
+            "entity": "type"
+          }
+        ],
+        "text": "How many fastest flight available for chennai"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "chennai",
+            "entity": "to"
+          }
+        ],
+        "text": "i would to like to travel to chennai"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 43,
+            "end": 49,
+            "value": "Kochi ",
+            "entity": "from"
+          },
+          {
+            "start": 13,
+            "end": 19,
+            "value": "direct",
+            "entity": "type"
+          },
+          {
+            "start": 52,
+            "end": 61,
+            "value": "Bangalore",
+            "entity": "to"
+          }
+        ],
+        "text": "Is there any direct flights available from Kochi to Bangalore"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "Chennai",
+            "entity": "to"
+          }
+        ],
+        "text": "Can you find a ticket for Chennai"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 22,
+            "end": 31,
+            "value": "Tirupathi",
+            "entity": "from"
+          }
+        ],
+        "text": "i want to travel from Tirupathi"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "chennai",
+            "entity": "to"
+          }
+        ],
+        "text": "i want to travel to chennai"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 36,
+            "end": 41,
+            "value": "Delhi",
+            "entity": "from"
+          }
+        ],
+        "text": "i am planning to book a flight from Delhi"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 26,
+            "end": 29,
+            "value": "Goa",
+            "entity": "from"
+          }
+        ],
+        "text": "Guide to book ticket from Goa"
+      },
+      {
+        "intent": "travel",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "Mumbai",
+            "entity": "from"
+          }
+        ],
+        "text": "Please book a ticket from Mumbai"
+      },
+      {
+        "intent": "default",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chennai",
+            "entity": "default"
+          }
+        ],
+        "text": "chennai"
+      },
+      {
+        "intent": "default",
+        "text": "trichy"
+      },
+      {
+        "intent": "default",
+        "text": "tirupathi"
+      },
+      {
+        "intent": "default",
+        "text": "goa"
+      },
+      {
+        "intent": "default",
+        "text": "mumbai"
+      },
+      {
+        "intent": "default",
+        "text": "Delhi"
+      },
+      {
+        "intent": "default",
+        "text": "Bangalore"
+      },
+      {
+        "intent": "default",
+        "text": "Kochi"
+      },
+      {
+        "intent": "default",
+        "text": "Pune"
+      },
+      {
+        "intent": "default",
+        "text": "Madurai"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "good bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "stop"
+      },
+      {
+        "intent": "goodbye",
+        "text": "end"
+      },
+      {
+        "intent": "goodbye",
+        "text": "farewell"
+      },
+      {
+        "intent": "goodbye",
+        "text": "Bye bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "have a good one"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}
