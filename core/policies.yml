@@ -1,0 +1,9 @@
+policies:
+  - name: KerasPolicy
+    epochs: 400
+    max_history: 5
+  - name: FallbackPolicy
+    fallback_action_name: 'utter_error_scope_message'
+  - name: MemoizationPolicy
+    max_history: 5
+  - name: FormPolicy

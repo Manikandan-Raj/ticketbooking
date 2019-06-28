@@ -1,0 +1,114 @@
+slots:
+  from:
+    type: unfeaturized
+    auto_fill: true
+  to:
+    type: unfeaturized
+    auto_fill: true
+  date:
+    type: unfeaturized
+    auto_fill: true
+  enddate:
+    type: unfeaturized
+    auto_fill: true
+  username:
+    type: unfeaturized
+    auto_fill: true
+  phonenumber:
+    type: unfeaturized
+    auto_fill: true
+  aadhaar:
+    type: unfeaturized
+    auto_fill: true
+  selectedflight:
+    type: unfeaturized
+    auto_fill: true
+  available_flights:
+    type: unfeaturized
+    auto_fill: true
+  mode:
+    type: unfeaturized
+    auto_fill: true
+
+intents:
+  - greet
+  - flightbook
+  - goodbye
+  - location
+  - airlinesname
+
+entities:
+  - from
+  - to
+  - date
+  - username
+  - phonenumber
+  - aadhaar
+  - enddate
+  - mode
+
+templates:
+  utter_greet:
+    - text: "Hello, I am your Ticket Booking Assistant,I can help you to book the flight ticket. You can say bye to leave the conversation"
+      buttons:
+        - title: "Book"
+          payload: "Book"
+        - title: "Cancel"
+          payload: "Cancel"
+  utter_ask_from:
+    - text: "Sure I can help you. Please give me the departure to proceed further"
+  utter_ask_to:
+    - text: "Please specify the destination"
+  utter_ask_date:
+    - text: "Kindly tell me the date when you want to travel. Please specify date in dd/mm/yyyy format?"
+  utter_ask_selected_flight:
+    - text: "You have selected {name} flight"
+  utter_wrong_context:
+    - text: "Sorry i dont understand"
+  utter_no_flights:
+    - text: "Sorry, No Flights are available"
+  utter_wrong_date:
+    - text: "Entered date is not valid."
+  utter_chitchat:
+    - text: "Sorry i dont understand, and i am limited to answer only flight booking"
+  utter_ask_username:
+    - text: "Please enter the username to proceed further"
+  utter_ask_phonenumber:
+    - text: "Please enter your phonenumber"
+  utter_ask_aadhaar:
+    - text: "Please enter your aadhar number"
+  utter_wrong_username:
+    - text: "Username is not valid."
+  utter_wrong_phonenumber:
+    - text: "Phonenumber is not valid."
+  utter_wrong_aadhaar:
+    - text: "AAdhaar is not valid"
+  utter_list_down_availableflights:
+    - text: "Please select any one flight from the below list:{matchedflight}"
+  utter_error_scope_message:
+    - text: "Sorry i am limited to answer related to Flight booking and Cancellation"
+  utter_ticket_book:
+    - text: "Your ticket has been booked and the referenceno is {referenceno}"
+  utter_no_ticket:
+    - text: "No Tickets are not available"
+  utter_bye:
+    - text: "Thanks, Nice talking to you"
+
+actions:
+- utter_greet
+- utter_no_flights
+- utter_bye
+- utter_error_scope_message
+- utter_ask_from
+- utter_ask_to
+- utter_ask_date
+- utter_ask_username
+- utter_ask_phonenumber
+- utter_ask_aadhaar
+- utter_ticket_book
+- action_filter
+- action_match
+
+forms:
+  - flightbooking_form
+  - flightbookingpersonal_form

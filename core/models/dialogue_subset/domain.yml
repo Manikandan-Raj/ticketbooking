@@ -1,0 +1,134 @@
+%YAML 1.1
+---
+actions:
+- utter_greet
+- utter_no_flights
+- utter_bye
+- utter_error_scope_message
+- utter_ask_from
+- utter_ask_to
+- utter_ask_date
+- utter_ask_username
+- utter_ask_phonenumber
+- utter_ask_aadhaar
+- utter_ticket_book
+- action_filter
+- action_match
+config:
+  store_entities_as_slots: true
+entities:
+- from
+- to
+- date
+- username
+- phonenumber
+- aadhaar
+- enddate
+- mode
+forms:
+- flightbooking_form
+- flightbookingpersonal_form
+intents:
+- greet:
+    use_entities: true
+- flightbook:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- location:
+    use_entities: true
+- airlinesname:
+    use_entities: true
+slots:
+  aadhaar:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  available_flights:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  date:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  enddate:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  from:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  mode:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  phonenumber:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  selectedflight:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  to:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  username:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+templates:
+  utter_ask_aadhaar:
+  - text: Please enter your aadhar number
+  utter_ask_date:
+  - text: Kindly tell me the date when you want to travel. Please specify date in
+      dd/mm/yyyy format?
+  utter_ask_from:
+  - text: Sure I can help you. Please give me the departure to proceed further
+  utter_ask_phonenumber:
+  - text: Please enter your phonenumber
+  utter_ask_selected_flight:
+  - text: You have selected {name} flight
+  utter_ask_to:
+  - text: Please specify the destination
+  utter_ask_username:
+  - text: Please enter the username to proceed further
+  utter_bye:
+  - text: Thanks, Nice talking to you
+  utter_chitchat:
+  - text: Sorry i dont understand, and i am limited to answer only flight booking
+  utter_error_scope_message:
+  - text: Sorry i am limited to answer related to Flight booking and Cancellation
+  utter_greet:
+  - buttons:
+    - payload: Book
+      title: Book
+    - payload: Cancel
+      title: Cancel
+    text: Hello, I am your Ticket Booking Assistant,I can help you to book the flight
+      ticket. You can say bye to leave the conversation
+  utter_list_down_availableflights:
+  - text: Please select any one flight from the below list:{matchedflight}
+  utter_no_flights:
+  - text: Sorry, No Flights are available
+  utter_no_ticket:
+  - text: No Tickets are not available
+  utter_ticket_book:
+  - text: Your ticket has been booked and the referenceno is {referenceno}
+  utter_wrong_aadhaar:
+  - text: AAdhaar is not valid
+  utter_wrong_context:
+  - text: Sorry i dont understand
+  utter_wrong_date:
+  - text: Entered date is not valid.
+  utter_wrong_phonenumber:
+  - text: Phonenumber is not valid.
+  utter_wrong_username:
+  - text: Username is not valid.

@@ -1,0 +1,1529 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "chennai",
+            "entity": "from"
+          },
+          {
+            "start": 33,
+            "end": 42,
+            "value": "bangalore",
+            "entity": "to"
+          }
+        ],
+        "text": "i want to travel from chennai to bangalore"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "chennai",
+            "entity": "to"
+          }
+        ],
+        "text": "Can i get a ticket to chennai"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 27,
+            "end": 36,
+            "value": "bangalore",
+            "entity": "to"
+          },
+          {
+            "start": 40,
+            "end": 50,
+            "value": "22/08/2019",
+            "entity": "date"
+          }
+        ],
+        "text": "I am planning to travel to bangalore in 22/08/2019"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "chennai ",
+            "entity": "to"
+          },
+          {
+            "start": 38,
+            "end": 48,
+            "value": "22/08/2019",
+            "entity": "date"
+          }
+        ],
+        "text": "Is ticket is available for chennai on 22/08/2019"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 45,
+            "end": 52,
+            "value": "chennai",
+            "entity": "from"
+          },
+          {
+            "start": 56,
+            "end": 65,
+            "value": "bangalore",
+            "entity": "to"
+          },
+          {
+            "start": 69,
+            "end": 79,
+            "value": "22/08/2019",
+            "entity": "date"
+          }
+        ],
+        "text": "can you assist me to book flight ticket from chennai to bangalore on 22/08/2019"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "cheapest ",
+            "entity": "mode"
+          },
+          {
+            "start": 31,
+            "end": 39,
+            "value": "chennai ",
+            "entity": "from"
+          },
+          {
+            "start": 42,
+            "end": 51,
+            "value": "bangalore",
+            "entity": "to"
+          }
+        ],
+        "text": "cheapest flight available from chennai to bangalore"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chennai",
+            "entity": "to"
+          },
+          {
+            "start": 9,
+            "end": 16,
+            "value": "fastest",
+            "entity": "mode"
+          }
+        ],
+        "text": "How many fastest flight available for chennai"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "chennai",
+            "entity": "to"
+          }
+        ],
+        "text": "i would to like to travel to chennai"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 43,
+            "end": 49,
+            "value": "Kochi ",
+            "entity": "from"
+          },
+          {
+            "start": 13,
+            "end": 19,
+            "value": "direct",
+            "entity": "mode"
+          },
+          {
+            "start": 52,
+            "end": 61,
+            "value": "Bangalore",
+            "entity": "to"
+          }
+        ],
+        "text": "Is there any direct flights available from Kochi to Bangalore"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "Chennai",
+            "entity": "to"
+          }
+        ],
+        "text": "Can you find a ticket for Chennai"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 22,
+            "end": 31,
+            "value": "Tirupathi",
+            "entity": "from"
+          }
+        ],
+        "text": "i want to travel from Tirupathi"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "chennai",
+            "entity": "to"
+          }
+        ],
+        "text": "i want to travel to chennai"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 36,
+            "end": 41,
+            "value": "Delhi",
+            "entity": "from"
+          }
+        ],
+        "text": "i am planning to book a flight from Delhi"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 26,
+            "end": 29,
+            "value": "Goa",
+            "entity": "from"
+          }
+        ],
+        "text": "Guide to book ticket from Goa"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "Mumbai",
+            "entity": "from"
+          }
+        ],
+        "text": "Please book a ticket from Mumbai"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chennai",
+            "entity": "default"
+          }
+        ],
+        "text": "chennai"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "trichy",
+            "entity": "default"
+          }
+        ],
+        "text": "trichy"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "tirupathi",
+            "entity": "default"
+          }
+        ],
+        "text": "tirupathi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "goa",
+            "entity": "default"
+          }
+        ],
+        "text": "goa"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "mumbai",
+            "entity": "default"
+          }
+        ],
+        "text": "mumbai"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Delhi",
+            "entity": "default"
+          }
+        ],
+        "text": "Delhi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Bangalore",
+            "entity": "default"
+          }
+        ],
+        "text": "Bangalore"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Kochi",
+            "entity": "default"
+          }
+        ],
+        "text": "Kochi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Pune",
+            "entity": "default"
+          }
+        ],
+        "text": "Pune"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Madurai",
+            "entity": "default"
+          }
+        ],
+        "text": "Madurai"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "good bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "stop"
+      },
+      {
+        "intent": "goodbye",
+        "text": "end"
+      },
+      {
+        "intent": "goodbye",
+        "text": "farewell"
+      },
+      {
+        "intent": "goodbye",
+        "text": "Bye bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "have a good one"
+      },
+      {
+        "intent": "greet",
+        "text": "HI"
+      },
+      {
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi bot"
+      },
+      {
+        "intent": "greet",
+        "text": "Hey bot"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello"
+      },
+      {
+        "intent": "greet",
+        "text": "Good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "hi again"
+      },
+      {
+        "intent": "greet",
+        "text": "hi folks"
+      },
+      {
+        "intent": "greet",
+        "text": "hi Mister"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there"
+      },
+      {
+        "intent": "greet",
+        "text": "greetings"
+      },
+      {
+        "intent": "greet",
+        "text": "hello everybody"
+      },
+      {
+        "intent": "greet",
+        "text": "hello is anybody is there"
+      },
+      {
+        "intent": "greet",
+        "text": "hello rebot"
+      },
+      {
+        "intent": "greet",
+        "text": "hallo"
+      },
+      {
+        "intent": "greet",
+        "text": "heey"
+      },
+      {
+        "intent": "greet",
+        "text": "hi hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "text": "hey hey"
+      },
+      {
+        "intent": "greet",
+        "text": "hello there"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "yo"
+      },
+      {
+        "intent": "greet",
+        "text": "hola"
+      },
+      {
+        "intent": "greet",
+        "text": "hi?"
+      },
+      {
+        "intent": "greet",
+        "text": "hey bot!"
+      },
+      {
+        "intent": "greet",
+        "text": "hello friend"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Singapore Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "China Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "ABC Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "XYZ Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Balaji Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "iOPEX Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Indian Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "John Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Balaji Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Bangalore Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Spicejet Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Indigo Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Air Asia"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Air Indian"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Chennai Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Delhi Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Air India"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Bharth Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Spicejet Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Goa Airlines"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Indigo"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Spicejet"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Air India"
+      },
+      {
+        "intent": "airlinesname",
+        "text": "Balaji Airlines"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "singapore",
+            "entity": "default"
+          }
+        ],
+        "text": "singapore"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Singapore",
+            "entity": "default"
+          }
+        ],
+        "text": "Singapore"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "delhi",
+            "entity": "default"
+          }
+        ],
+        "text": "delhi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Delhi",
+            "entity": "default"
+          }
+        ],
+        "text": "Delhi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "tirupathi",
+            "entity": "default"
+          }
+        ],
+        "text": "tirupathi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Tirupathi",
+            "entity": "default"
+          }
+        ],
+        "text": "Tirupathi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "bangalore",
+            "entity": "default"
+          }
+        ],
+        "text": "bangalore"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Bangalore",
+            "entity": "default"
+          }
+        ],
+        "text": "Bangalore"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "delhi",
+            "entity": "default"
+          }
+        ],
+        "text": "delhi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Delhi",
+            "entity": "default"
+          }
+        ],
+        "text": "Delhi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "goa",
+            "entity": "default"
+          }
+        ],
+        "text": "goa"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "Goa",
+            "entity": "default"
+          }
+        ],
+        "text": "Goa"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "kochi",
+            "entity": "default"
+          }
+        ],
+        "text": "kochi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "mumbai",
+            "entity": "default"
+          }
+        ],
+        "text": "mumbai"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Mumbai",
+            "entity": "default"
+          }
+        ],
+        "text": "Mumbai"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "pune",
+            "entity": "default"
+          }
+        ],
+        "text": "pune"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Pune",
+            "entity": "default"
+          }
+        ],
+        "text": "Pune"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "madurai",
+            "entity": "default"
+          }
+        ],
+        "text": "madurai"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Madurai",
+            "entity": "default"
+          }
+        ],
+        "text": "Madurai"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Kochi",
+            "entity": "default"
+          }
+        ],
+        "text": "Kochi"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chennai",
+            "entity": "default"
+          }
+        ],
+        "text": "chennai"
+      },
+      {
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Chennai",
+            "entity": "default"
+          }
+        ],
+        "text": "Chennai"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 19,
+            "end": 29,
+            "value": "9943019967",
+            "entity": "phonenumber"
+          }
+        ],
+        "text": "My phone number is 9943019967"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 14,
+            "end": 24,
+            "value": "9943019967",
+            "entity": "phonenumber"
+          }
+        ],
+        "text": "This is my no 9943019967"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 4,
+            "end": 14,
+            "value": "9943019967",
+            "entity": "phonenumber"
+          }
+        ],
+        "text": "+91-9943019967 this is my phonenumber"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 24,
+            "end": 35,
+            "value": "99430019967",
+            "entity": "phonenumber"
+          }
+        ],
+        "text": "Sure My phonenumber is 099430019967"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 27,
+            "end": 37,
+            "value": "9943019967",
+            "entity": "phonenumber"
+          }
+        ],
+        "text": "my telephone number is +91-9943019967"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "9943019967",
+            "entity": "phonenumber"
+          }
+        ],
+        "text": "and my number is +91-9943019967"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 16,
+            "end": 28,
+            "value": "123456789098",
+            "entity": "aadhaar"
+          }
+        ],
+        "text": "My aadhaar code 123456789098"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 18,
+            "end": 30,
+            "value": "875409123456",
+            "entity": "aadhaar"
+          }
+        ],
+        "text": "my personal id is 875409123456"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 24,
+            "end": 36,
+            "value": "670945436714",
+            "entity": "aadhaar"
+          }
+        ],
+        "text": "this is my aadhaar card 670945436714"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 23,
+            "end": 35,
+            "value": "457634679809",
+            "entity": "aadhaar"
+          }
+        ],
+        "text": "this is my personal id 457634679809"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 10,
+            "end": 24,
+            "value": "1234-0987-0987",
+            "entity": "aadhaar"
+          }
+        ],
+        "text": "And my id 1234-0987-0987"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 15,
+            "end": 29,
+            "value": "0987-5678-0978",
+            "entity": "aadhaar"
+          }
+        ],
+        "text": "My personal id 0987-5678-0978"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "Thomas",
+            "entity": "username"
+          }
+        ],
+        "text": "My name is Thomas"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "Sathish",
+            "entity": "username"
+          }
+        ],
+        "text": "I am Sathish here"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 17,
+            "end": 27,
+            "value": "Manojkumar",
+            "entity": "username"
+          }
+        ],
+        "text": "My First name is Manojkumar"
+      },
+      {
+        "intent": "personalinfo",
+        "entities": [
+          {
+            "start": 16,
+            "end": 26,
+            "value": "Manikandan",
+            "entity": "username"
+          }
+        ],
+        "text": "Yeah my name is Manikandan"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "chennai",
+            "entity": "from"
+          },
+          {
+            "start": 33,
+            "end": 42,
+            "value": "singapore",
+            "entity": "to"
+          }
+        ],
+        "text": "i want to travel from chennai to singapore"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "CHENNAI",
+            "entity": "from"
+          },
+          {
+            "start": 33,
+            "end": 42,
+            "value": "singapore",
+            "entity": "to"
+          }
+        ],
+        "text": "i want to travel from CHENNAI to singapore"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 33,
+            "end": 42,
+            "value": "SINGAPORE",
+            "entity": "to"
+          },
+          {
+            "start": 22,
+            "end": 29,
+            "value": "chennai",
+            "entity": "from"
+          }
+        ],
+        "text": "i want to travel from chennai to SINGAPORE"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "chennai",
+            "entity": "from"
+          },
+          {
+            "start": 33,
+            "end": 42,
+            "value": "singapore",
+            "entity": "to"
+          },
+          {
+            "start": 46,
+            "end": 56,
+            "value": "22/08/2019",
+            "entity": "date"
+          }
+        ],
+        "text": "i want to travel from chennai to singapore on 22/08/2019"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 33,
+            "end": 40,
+            "value": "chennai",
+            "entity": "from"
+          },
+          {
+            "start": 44,
+            "end": 53,
+            "value": "singapore",
+            "entity": "to"
+          }
+        ],
+        "text": "i would like to book flight from chennai to singapore"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "direct",
+            "entity": "mode"
+          }
+        ],
+        "text": "Is there any direct flights out of this list"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "direct",
+            "entity": "mode"
+          }
+        ],
+        "text": "How many direct flights are there?"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "direct",
+            "entity": "mode"
+          }
+        ],
+        "text": "I am looking for direct flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "direct",
+            "entity": "mode"
+          }
+        ],
+        "text": "show me the direct flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "direct",
+            "entity": "mode"
+          }
+        ],
+        "text": "let me know how many direct flights available"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "direct",
+            "entity": "mode"
+          }
+        ],
+        "text": "show direct flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "direct",
+            "entity": "mode"
+          }
+        ],
+        "text": "i am mainly looking for direct flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "direct",
+            "entity": "mode"
+          }
+        ],
+        "text": "how many direct flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "direct",
+            "entity": "mode"
+          }
+        ],
+        "text": "i am interested only in direct flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "cheapest",
+            "entity": "mode"
+          }
+        ],
+        "text": "Is there any cheapest flights out of this list"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "cheapest",
+            "entity": "mode"
+          }
+        ],
+        "text": "How many cheapest flights are there?"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 17,
+            "end": 25,
+            "value": "cheapest",
+            "entity": "mode"
+          }
+        ],
+        "text": "I am looking for cheapest flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "cheapest",
+            "entity": "mode"
+          }
+        ],
+        "text": "show me the cheapest flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "cheapest",
+            "entity": "mode"
+          }
+        ],
+        "text": "let me know how many cheapest flights available"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "cheapest",
+            "entity": "mode"
+          }
+        ],
+        "text": "show cheapest flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 24,
+            "end": 32,
+            "value": "cheapest",
+            "entity": "mode"
+          }
+        ],
+        "text": "i am mainly looking for cheapest flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "cheapest",
+            "entity": "mode"
+          }
+        ],
+        "text": "how many cheapest flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "fastest",
+            "entity": "mode"
+          }
+        ],
+        "text": "Is there any fastest flights out of this list"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 9,
+            "end": 16,
+            "value": "fastest",
+            "entity": "mode"
+          }
+        ],
+        "text": "How many fastest flights are there?"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 17,
+            "end": 24,
+            "value": "fastest",
+            "entity": "mode"
+          }
+        ],
+        "text": "I am looking for fastest flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "fastest",
+            "entity": "mode"
+          }
+        ],
+        "text": "show me the fastest flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "fastest",
+            "entity": "mode"
+          }
+        ],
+        "text": "let me know how many fastest flights available"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "fastest",
+            "entity": "mode"
+          }
+        ],
+        "text": "show fastest flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 24,
+            "end": 31,
+            "value": "fastest",
+            "entity": "mode"
+          }
+        ],
+        "text": "i am mainly looking for fastest flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 9,
+            "end": 16,
+            "value": "fastest",
+            "entity": "mode"
+          }
+        ],
+        "text": "how many fastest flights"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 8,
+            "end": 18,
+            "value": "20/08/2019",
+            "entity": "date"
+          },
+          {
+            "start": 23,
+            "end": 33,
+            "value": "30/08/2019",
+            "entity": "enddate"
+          }
+        ],
+        "text": "between 20/08/2019 and 30/08/2019"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 14,
+            "end": 24,
+            "value": "20/08/2019",
+            "entity": "date"
+          },
+          {
+            "start": 28,
+            "end": 38,
+            "value": "28/08/2019",
+            "entity": "enddate"
+          }
+        ],
+        "text": "starting from 20/08/2019 to 28/08/2019"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 31,
+            "end": 41,
+            "value": "20/08/2019",
+            "entity": "date"
+          },
+          {
+            "start": 46,
+            "end": 56,
+            "value": "30/08/2019",
+            "entity": "enddate"
+          }
+        ],
+        "text": "i would like travel in between 20/08/2019 and 30/08/2019"
+      },
+      {
+        "intent": "flightbook",
+        "entities": [
+          {
+            "start": 17,
+            "end": 27,
+            "value": "20/08/2019",
+            "entity": "date"
+          },
+          {
+            "start": 31,
+            "end": 41,
+            "value": "30/08/2019",
+            "entity": "enddate"
+          }
+        ],
+        "text": "anything between 20/08/2019 to 30/08/2019"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}

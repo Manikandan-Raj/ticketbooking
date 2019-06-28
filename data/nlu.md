@@ -1,0 +1,249 @@
+## intent:greet
+- Hi
+- Hey
+- Hi bot
+- Hey bot
+- Hello
+- Good morning
+- hi again
+- hi folks
+- hi Mister
+- hi pal!
+- hi there
+- greetings
+- hello everybody
+- hello is anybody there
+- hello robot
+- hallo
+- heeey
+- hi hi
+- hey
+- hey hey
+- hello there
+- hi
+- hello
+- yo
+- hola
+- hi?
+- hey bot!
+- hello friend
+
+## intent:flightbook
+- i want to travel from [chennai](from) to [bangalore](to)
+- Can i get a ticket to [chennai](from)
+- I am planning to travel to [bangalore](to) in [22/08/2019](date)
+- Is ticket is available for [chennai](to) on 22/08/2019(date)
+- can you assist me to book flight ticket from [chennai](from) to [bangalore](to) on [22/08/2019](date)
+- [cheapest](type) flight available from [chennai](from) to [bangalore](to)
+- How many [fastest](type) flight available for [chennai](to)
+- i would to like to travel to [chennai](to)
+- Is there any [direct](type) flights available from [Kochi](from) to [Bangalore](to)
+- Can you find a ticket for [Chennai](to)
+- i want to travel from [Tirupathi](from)
+- i want to travel to [chennai](to)
+- i am planning to book a flight from [Delhi](from)
+- Guide to book ticket from [Goa](from)
+- Please book a ticket from [Mumbai](from)
+- List down all the flights from [chennai](from)to [singapore](to)
+- Please check and tell the available flights from [chennai](from) to [singapore](to)
+- Let know what are the flights available from [Madurai](from)
+- I want to get all the flights which are available from [delhi](from) to [chennai](to)
+- Get me flight ticket from [chennai](from) to [singapore](to)
+- Is there any tickets for [Tirupathi](from)?
+- May be [tommorrow](date) i need to book a flight ticket
+- i want to travel
+- i want to travel from [kochi](from) to [bangalore](to)
+- on [23/08/2019](date)
+- i would like to go to [delhi](from)
+- i want to travel from [kochi](from) to [pune](to)
+- i would like to travel from [madurai](from) to [tirupathi](to)
+- Can i get a flight ticket?
+- Can you arrange the flight ticket on [30/08/2019](date)
+- from [delhi](from)
+- from [chennai](from)
+- to [pune](to)
+- to [goa](to)
+- to [bangalore](to)
+- at [25/08/2019](date)
+- to [singapore](to)
+- from [23/08/2019](startdate) and [26/08/2019](enddate)
+- starts from [20/08/2019](startdate) to [28/08/2019](enddate)
+- i want the flight ticket from [goa](from) to [bangalore](to) on [26/08/2019](date)
+- help me to get the flight ticket to [pune](to)
+- Is there any direct flights out of this list
+- How many direct flights are there?
+- I am looking for direct flights
+- show me the direct flights
+- let me know how many direct flights available
+- show direct flights
+- i am mainly looking for direct flights
+- how many direct flights
+
+- Is there any cheapest flights out of this list
+- How many cheapest flights are there?
+- I am looking for cheapest flights
+- show me the cheapest flights
+- let me know how many cheapest flights available
+- show cheapest flights
+- i am mainly looking for cheapest flights
+- how many cheapest flights
+
+- Is there any fastest flights out of this list
+- How many fastest flights are there?
+- I am looking for fastest flights
+- show me the fastest flights
+- let me know how many fastest flights available
+- show fastest flights
+- i am mainly looking for fastest flights
+- how many fastest flights
+
+
+
+## intent:location
+- chennai
+- Chennai
+- Tirupathi
+- tirupathi
+- trichy
+- Trichy
+- goa
+- Goa
+- mumbai
+- Mumbai
+- delhi
+- Delhi
+- Bangalore
+- bangalore
+- kochi
+- Kochi
+- pune
+- Pune
+- Madurai
+- madurai
+
+## intent:goodbye
+- um thank you good bye
+- okay cool uh good bye thank you
+- okay thank you good bye
+- you rock
+- and thats all thank you and good bye
+- thank you and good bye
+- sorry about my mistakes thank you good bye
+- noise thank you good bye
+- thank you goodbye noise
+- okay thank you goodbye
+- uh thank you good bye
+- thank you goodbye
+- thank you goodbye noise thank you goodbye
+- breath thank you goodbye
+- thank you
+- okay thank you
+- thanks goodbye
+- ah thank you goodbye
+- thank you noise
+- thank you good bye
+- breath thank you very much goodbye
+- thanks
+- noise thank you goodbye
+- unintelligible thank you goodbye
+- uh okay thank you good bye
+- thank you bye
+- um okay thank you good bye
+
+## intent:airlinesname
+- Singapore Airlines
+- China Airlines
+- ABC Airlines
+- XYZ Airlines
+- Balaji Airlines
+- iOPEX Airlines
+- Indian Airlines
+- John Airlines
+- Balaji Airlines
+- Bangalore Airlines
+- Spicejet Airlines
+- Indigo Airlines
+- Air Asia
+- Air Indian
+- Chennai Airlines
+- Delhi Airlines
+- Air India
+- Bharth Airlines
+- Goa Airlines
+- Indigo
+- Spicejet
+- Balaji Airlines
+- Spicejet Airlines
+
+## intent:chitchat
+- can you share your boss with me?
+- i want to get to know your owner
+- i want to know the company which designed you
+- i want to know the company which generated you
+- i want to know the company which invented you
+- i want to know who invented you
+- May I ask who invented you?
+- please tell me the company who created you
+- please tell me who created you
+- tell me more about your creators
+- tell me more about your founders
+- Ahoy matey how are you?
+- are you alright
+- are you having a good day
+- Are you ok?
+- are you okay
+- Do you feel good?
+- how are things going
+- how are things with you?
+- How are things?
+- how are you
+- how are you doing
+- how are you doing this morning
+- how are you feeling
+- how are you today
+- How are you?
+- How is the weather today?
+- What's the weather like?
+- How is the weather?
+- What is the weather at your place?
+- Do you have good weather?
+- Is it raining?
+- What's it like out there?
+- Is it hot or cold?
+- Beautiful day, isn't it?
+- What's the weather forecast?
+- Is it quite breezy outside?
+
+## intent:done
+- ok
+- okay
+- Cool
+- cool
+- Yeah
+- yes
+- Correct
+- Right
+- Your'e right
+- Please go ahead
+- fine
+- good
+- correct
+- right
+
+## intent: personalinfo
+- My phonenumber is 9943019967
+- This is my no 9943019967
+- +91-9943019967 this is my phonenumber
+- Sure My phonenumber is 099430019967
+- my telephone number is +91-9943019967
+- and my number is +91-9943019967
+- My aadhaar code 123456789098
+- my personal id is 875409123456
+- this is my aadhaar card 670945436714
+- this is my personal id 457634679809
+- And my id 1234-0987-0987
+- My personal id 0987-5678-0978
+- My name is Thomas
+- I am Sathish here
+- My First name is Manojkumar
+- Yeah my name is Manikandan

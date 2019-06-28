@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/vignesh.ramanathan/Desktop/rasa_stack/data/models1/flightbook/default/model_20190624-113820/component_9_EmbeddingIntentClassifier.ckpt"
+all_model_checkpoint_paths: "/Users/vignesh.ramanathan/Desktop/rasa_stack/data/models1/flightbook/default/model_20190624-113820/component_9_EmbeddingIntentClassifier.ckpt"

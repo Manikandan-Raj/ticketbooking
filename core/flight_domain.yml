@@ -1,0 +1,110 @@
+slots:
+  from:
+    type: unfeaturized
+    auto_fill: false
+  to:
+    type: unfeaturized
+    auto_fill: false
+  date:
+    type: unfeaturized
+    auto_fill: false
+  available_flights:
+    type: list
+  selectflight:
+    type: unfeaturized
+  filtered_flights:
+    type: list
+  mode:
+    type: categorical
+    values:
+    - direct
+    - fastest
+    - cheapest
+  name:
+    type: unfeaturized
+    auto_fill: false
+  phonenumber:
+    type: unfeaturized
+    auto_fill: false
+  aadhaar:
+    type: unfeaturized
+    auto_fill: false
+  referenceno:
+    type: text
+
+
+intents:
+  - greet
+  - goodbye
+  - flight
+  - flightbook
+  - chooseflight
+  - personalinformation
+
+
+
+entities:
+  - from
+  - to
+  - date
+  - selectflight
+  - name
+  - phonenumber
+  - aadhaar
+
+templates:
+  utter_greet:
+    - text: "Hello, I am your Ticket Booking Assistant,I can help you to book the flight ticket. You can say bye to leave the conversation"
+      buttons:
+        - title: "Book"
+          payload: "Book"
+        - title: "Cancel"
+          payload: "Cancel"
+  utter_ask_from:
+    - text: "Sure I can help you. Please give me the departure to proceed further"
+  utter_ask_to:
+    - text: "Please specify the destination"
+  utter_ask_date:
+    - text: "Kindly tell me the date when you want to travel. Please specify date in dd/mm/yyyy format?"
+  utter_list_down_availableflights:
+    - text: "Please select any one flight from the below list:{available_flights}"
+  utter_list_down_flitered_flights:
+    - text: "Please select any one flight from the below list:{filtered_flights}"
+  utter_ask_name:
+    - text: "Tickets are available. Please enter your name to complete the booking process"
+  utter_ask_phonenumber:
+    - text: "Please give me your phone number"
+  utter_ask_aadhar:
+    - text: "Please give me the aadhar card number"
+  utter_no_flights:
+    - text: "Sorry, No Flights are available"
+  utter_no_tickets:
+    - text: "Sorry, No Tickets are available"
+  utter_wrong_from:
+    - text: "Our service is not available on that place. Please enter the departure once again"
+  utter_wrong_to:
+    - text: "Our service is not available on that place. Please enter the destination once again"
+  utter_wrong_date:
+    - text: "Entered date is not valid. Please sepcify the date in dd/mm/yyyy format?"
+  utter_phonenumber_invalid:
+    - text: "Entered phonenumber is not valid,Please give me your phone number"
+  utter_aadharnumber_invalid:
+    - text: "Entered aadhar is not valid,Please give me the aadhar card number"
+  utter_error_scope_message:
+    - text: "Sorry i am limited to answer related to Flight booking and Cancellation"
+  utter_final_message:
+    - text: "Your ticket has been booked and the referenceno is {referenceno}"
+  utter_bye:
+    - text: "Thanks, Nice talking to you"
+
+actions:
+  - utter_greet
+  - utter_list_down_flitered_flights
+  - utter_no_flights
+  - utter_no_tickets
+  - utter_phonenumber_invalid
+  - utter_aadharnumber_invalid
+  - utter_error_scope_message
+  - utter_final_message
+  - utter_bye
+  - flightbooking_form

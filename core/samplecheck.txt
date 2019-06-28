@@ -1,0 +1,191 @@
+https://assistant-jpg8929.slack.com/messages/DKVLY3630/
+
+
+https://towardsdatascience.com/building-a-conversational-chatbot-for-slack-using-rasa-and-python-part-2-ce7233f2e9e7
+
+
+generating dialogue engine:
+/Users/vignesh.ramanathan/Desktop/rasa_stack/core
+sudo python main_core.py
+
+Activating actions:
+sudo python -m rasa_core_sdk.endpoint --actions actions --port 5000
+
+
+Loading dialogue and interpreter with SlackBot
+python app.py
+
+
+
+2136010052049
+UTBIOKLLP10
+POONGOTHAI RAJAPPAN
+
+# "attachments": [
+  #     {
+  #         "text": "Choose any one flight from the below",
+  #         "fallback": "You are unable to select a flight",
+  #         "callback_id": "flightbook",
+  #         "color": "#3AA3E3",
+  #         "attachment_type": "default",
+  #         "actions": matched_button_flight
+  #     }
+  # ]
+
+
+
+  connection true : fastest and direct
+  connection false: cheapest
+
+  # if matched_flight:
+      #     import json
+      #     import requests
+      #
+      #     url = "https://hooks.slack.com/services/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"
+      #     headers = {"Content-type":"application/json"}
+      #     data  = json.dumps(matched_flight)
+      #
+      #     # Request to slack
+      #     res =  requests.post(url, headers= headers, data=data)
+      #     return []
+
+python -m rasa_core.train -s stories.md -d subset_flightdomain.yml -o models/dialogue_subset --epochs 250 --online --nlu /Users/vignesh.ramanathan/Desktop/rasa_stack/data/models1/flightbook/default/model_20190624-113820
+
+python -m rasa_core.train –online -o models/dialogue_subset -d subset_flightdomain.yml -s stories.md -u /Users/vignesh.ramanathan/Desktop/rasa_stack/data/models1/flightbook/default/model_20190624-113820 –endpoints endpoints.yml –epochs 200
+
+0.14.5
+
+from        TO
+Chennai     Singapore   22/08/2019
+Tirupathi   Chennai     23/08/2019
+Bangalore   Tirupathi   24/08/2019
+Delhi       Chennai     25/08/2019
+Goa         Bangalore   26/08/2019
+Kochi       Bangalore   27/08/2019
+Mumbai      Goa         28/08/2019
+Pune        Delhi       29/08/2019
+Kochi       Pune        30/08/2019
+Madurai     Tirupathi   01/09/2019
+
+## Generated Story 5349715737542716572
+* greet
+    - utter_greet
+* flightbook
+    - flightbooking_form
+    - form{"name": "flightbooking_form"}
+    - slot{"requested_slot": "from"}
+* form: flightbook{"from": "chennai"}
+    - slot{"from": "chennai"}
+    - form: flightbooking_form
+    - slot{"from": "chennai"}
+    - slot{"requested_slot": "to"}
+* form: flightbook{"to": "singapore"}
+    - slot{"to": "singapore"}
+    - form: flightbooking_form
+    - slot{"to": "singapore"}
+    - slot{"requested_slot": "date"}
+* form: flightbook{"DATE": "22/08/2019", "date": "22/08/2019"}
+    - slot{"date": "22/08/2019"}
+    - form: flightbooking_form
+    - slot{"date": "22/08/2019"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* airlinesname{"ORG": "China Airlines"}
+    - action_match
+    - slot{"selectedflight": "China Airlines"}
+    - flightbookingpersonal_form
+    - form{"name": "flightbookingpersonal_form"}
+    - slot{"requested_slot": "username"}
+* form: greet
+    - form: flightbookingpersonal_form
+    - slot{"username": "mani"}
+    - slot{"requested_slot": "phonenumber"}
+* form: flightbook{"CARDINAL": "9943019967"}
+    - form: flightbookingpersonal_form
+    - slot{"phonenumber": "9943019967"}
+    - slot{"requested_slot": "aadhaar"}
+* form: flightbook{"DATE": "12345678909"}
+    - form: flightbookingpersonal_form
+    - slot{"aadhaar": "12345678909"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* goodbye
+    - utter_bye
+    - action_restart
+
+
+## Story 002 HappyPath TravelRequest->Booking
+* flightbook
+    - flightbooking_form
+    - form{"name": "flightbooking_form"}
+* airlinesname
+    - action_match
+    - flightbookingpersonal_form
+    - form{"name": "flightbookingpersonal_form"}
+* goodbye
+    - utter_bye
+    - action_restart
+
+## Story 003 HappyPath TravelRequest -> Booking
+* flightbook{"from":"chennai"}
+    - flightbooking_form
+    - form{"name": "flightbooking_form"}
+* airlinesname
+    - action_match
+    - flightbookingpersonal_form
+    - form{"name": "flightbookingpersonal_form"}
+* goodbye
+    - utter_bye
+    - action_restart
+
+
+## story 004 UnHappyPath Greet->Travelrequest->Booking
+* greet
+    - utter_greet
+* goodbye
+    - utter_bye
+
+## story 005 UnHappyPath Greet->Travelrequest->Booking
+* greet
+    - utter_greet
+* flightbook
+    - flightbooking_form
+    - form{"name": "flightbooking_form"}
+* goodbye
+    - utter_bye
+    - action_restart
+
+## Story 006 Reset all
+* goodbye
+    - utter_bye
+    - action_restart
+
+
+## unhappypath_bye_after_departure
+* greet
+    - utter_greet
+* flightbook
+    - flightbooking_form
+    - form{"name": "flightbooking_form"}
+    - slot{"requested_slot": "from"}
+* goodbye
+    - utter_bye
+    - action_restart
+
+# if matched_flight:
+    #     import json
+    #     import requests
+    #
+    #     url = "https://hooks.slack.com/services/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"
+    #     headers = {"Content-type":"application/json"}
+    #     data  = json.dumps(matched_flight)
+    #
+    #     # Request to slack
+    #     res =  requests.post(url, headers= headers, data=data)
+    #     return []
+
+
+/home/jenkins/hub-detect.sh --blackduck.url=https://blackduck.eng.nutanix.com --blackduck.username=sysadmin --blackduck.password=fret-egotism-justice --blackduck.trust.cert=true --detect.project.name=ALPINEDOCKERIMAGE --detect.project.version.name=0.0.1 --detect.blackduck.signature.scanner.paths=./alpine.tarblack
+
+
+YWY5MjIxNzEtMzdhYi00YjNhLWE2NGMtN2VhYjZhY2JkZDkxOjI3MzFjNGY0LTY3ZGQtNDBkNS1iZmU5LTA0NmNlNzU5NGM0Mg==
